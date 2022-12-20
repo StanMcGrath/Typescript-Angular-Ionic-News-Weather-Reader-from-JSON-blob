@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-navbar>
+   <ion-title>
+      G00398383
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button icon-only (click)="openSettings()">
+        <ion-icon name="settings"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+ 
+ <h1 [hidden] = "hidden">No city selected</h1>
+ <h1 [hidden] = "hidden3">{{ citySettings }} not found, try another city in settings. </h1>
+ <div [hidden] ="hidden2"> 
+ <h1> News & Weather for {{ citySettings }}, {{ countryName }}. </h1>
+ <img width="120" height="60" src = "{{countryFlag}}">
+ <br>
+ <br>
+ <h5>Weather: {{ description }}</h5>
+ <br>
+ <img src = "https://www.weatherbit.io/static/img/icons/{{icon}}.png">
+ <br>
+ <h5 [hidden] = "green" style="color:green">Temperature: {{ temp }} {{unit}} ({{unitSettings}})</h5>
+ <h5 [hidden] = "blue" style="color:blue">Temperature: {{ temp }} {{unit}} ({{unitSettings}})</h5>
+ <h5 [hidden] = "red" style="color:red">Temperature: {{ temp }} {{unit}} ({{unitSettings}})</h5>
+ <h5 [hidden] = "orange" style="color:orange">Temperature: {{ temp }} {{unit}} ({{unitSettings}})</h5>
+ <br>
+ <h5 style ="color:dodgerblue">Wind From: {{ wind }}</h5>
+ <br>
+ <h5 style = "color:gray"> Last Updated For {{countryCode}}: {{obtime}}</h5>
+ <br>
+ <br>
+ <button ion-button (click)="openNews()">News</button>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <h4> Click here to reset storage: </h4>
+ <button ion-button color="danger" (click)="resetStorage()">Reset Storage</button>
+</div>
+
+  </ion-content>

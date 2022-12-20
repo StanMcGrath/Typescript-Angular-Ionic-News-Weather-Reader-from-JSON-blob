@@ -1,0 +1,28 @@
+<!--
+  Generated template for the NewsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<!-- TRY ERROR HANDLING FIX FOR NEWS BUG LIKE ON HOME.TS-->
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>News</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<h1>News From {{countryCode}}</h1>
+<h2 [hidden] = "hidden">No News From {{ countryCode }}.</h2>
+<p [hidden] = "hidden">Please refresh the page and try again. If no news is found after multiple attempts, then this country may not be covered by our API.</p>
+<br>
+<ion-list> 
+	<ion-item *ngFor="let x of articles | slice:0:5;">
+	<a href="{{x.url}}"><img width="200" height="150" src="{{ x.urlToImage }} "></a>
+	<a href="{{x.url}}"><h2> {{ x.title }}</h2></a>
+	<a href="{{x.url}}"><p> {{ x.description }}</p></a>
+	</ion-item>
+</ion-list>
+</ion-content>
