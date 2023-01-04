@@ -5,3 +5,5 @@ To launch the programme, the SRC folder must be added to the directory of an alr
 navigate to that directory with node.js command prompt and run the command:
 
 --ionic serve.
+
+/
